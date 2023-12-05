@@ -4,12 +4,29 @@ import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
 describe("<Header />", () => {
-  it("has a header", () => {
+  // const header = () => {
+  //   return render(
+  //     <BrowserRouter>
+  //       <Header />
+  //     </BrowserRouter>
+  //   );
+  // };
+
+  beforeAll(() =>
     render(
       <BrowserRouter>
         <Header />
       </BrowserRouter>
-    );
+    )
+  );
+
+  it("has a header", () => {
+    // header();
+    // render(
+    //   <BrowserRouter>
+    //     <Header />
+    //   </BrowserRouter>
+    // );
     // screen.logTestingPlaygroundURL()
   });
 
@@ -19,6 +36,7 @@ describe("<Header />", () => {
         <Header />
       </BrowserRouter>
     );
+
     const nav = screen.getByRole("naviagtion", {
       name: /navigation bar/i,
     });
