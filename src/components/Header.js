@@ -3,7 +3,11 @@ import { Nav, NavItem } from "reactstrap";
 
 const Header = () => {
   return (
-    <header className="p-4 bg-secondary">
+    <header
+      role="naviagtion"
+      aria-label="Navigation Bar"
+      className="p-4 bg-secondary"
+    >
       <Nav justified pills>
         <NavItem>
           <NavLink className="text-white" to="/">
