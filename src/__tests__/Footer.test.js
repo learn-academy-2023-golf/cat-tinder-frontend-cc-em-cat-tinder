@@ -17,7 +17,9 @@ describe("<Footer />", () => {
     footer();
     const copyright = screen.getByRole("contentinfo");
     expect(copyright).toBeInTheDocument();
-    const footerText = screen.getByText(/© cat tinder \| 2023/i);
+    const currentYear = new Date().getFullYear();
+    const footerTextPattern = new RegExp(`© cat tinder \\| ${currentYear}`, 'i')
+    const footerText = screen.getByText(footerTextPattern);
     expect(footerText).toBeInTheDocument();
   });
   it("has clickable links", () => {
