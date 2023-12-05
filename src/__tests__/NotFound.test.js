@@ -3,21 +3,18 @@ import NotFound from "../pages/NotFound";
 import { BrowserRouter } from "react-router-dom";
 
 describe("<NotFound />", () => {
+  const notfound = () => {
+    return render(
+      <BrowserRouter>
+        <NotFound />
+      </BrowserRouter>
+    );
+  };
   it("renders without errors", () => {
-    render(
-      <BrowserRouter>
-        <NotFound />
-      </BrowserRouter>
-    );
-    // screen.logTestingPlaygroundURL();
+    notfound();
   });
-
   it("displays 404 Not Found", () => {
-    render(
-      <BrowserRouter>
-        <NotFound />
-      </BrowserRouter>
-    );
+    notfound();
     const text = screen.getByText("404 Not Found");
     expect(text).toBeInTheDocument();
   });

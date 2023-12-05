@@ -4,51 +4,25 @@ import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
 
 describe("<Header />", () => {
-  // const header = () => {
-  //   return render(
-  //     <BrowserRouter>
-  //       <Header />
-  //     </BrowserRouter>
-  //   );
-  // };
-
-  beforeAll(() =>
-    render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>
-    )
-  );
-
-  it("has a header", () => {
-    // header();
-    // render(
-    //   <BrowserRouter>
-    //     <Header />
-    //   </BrowserRouter>
-    // );
-    // screen.logTestingPlaygroundURL()
-  });
-
-  it("has naviagtion", () => {
-    render(
+  const header = () => {
+    return render(
       <BrowserRouter>
         <Header />
       </BrowserRouter>
     );
-
+  };
+  it("has a header", () => {
+    header();
+  });
+  it("has naviagtion", () => {
+    header();
     const nav = screen.getByRole("naviagtion", {
       name: /navigation bar/i,
     });
     expect(nav).toBeInTheDocument();
   });
-
   it("has clickable links", () => {
-    render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>
-    );
+    header();
     userEvent.click(screen.getByText("Home"));
     expect(screen.getByText("Home")).toBeInTheDocument();
     userEvent.click(screen.getByText("Cat Index"));
@@ -56,13 +30,8 @@ describe("<Header />", () => {
     userEvent.click(screen.getByText("Cat New"));
     expect(screen.getByText("Cat New")).toBeInTheDocument();
   });
-
   it("Links are the correct role", () => {
-    render(
-      <BrowserRouter>
-        <Header />
-      </BrowserRouter>
-    );
+    header();
     const link = screen.getByRole("link", {
       name: /Home/i,
     });

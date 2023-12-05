@@ -3,21 +3,18 @@ import Home from "../pages/Home";
 import { BrowserRouter } from "react-router-dom";
 
 describe("<Home />", () => {
+  const home = () => {
+    return render(
+      <BrowserRouter>
+        <Home />
+      </BrowserRouter>
+    );
+  };
   it("renders without errors", () => {
-    render(
-      <BrowserRouter>
-        <Home />
-      </BrowserRouter>
-    );
-    // screen.logTestingPlaygroundURL();
+    home();
   });
-
   it("has a heading", () => {
-    render(
-      <BrowserRouter>
-        <Home />
-      </BrowserRouter>
-    );
+    home();
     const heading = screen.getByRole("heading", {
       name: /home/i,
     });

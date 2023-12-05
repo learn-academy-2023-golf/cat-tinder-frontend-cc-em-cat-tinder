@@ -3,20 +3,18 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 
 describe("<App />", () => {
-  it("renders without errors", () => {
-    render(
+  const app = () => {
+    return render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
-        // screen.logTestingPlaygroundURL();
+  };
+  it("renders without errors", () => {
+    app();
   });
   it("has a heading", () => {
-    render(
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    );
+    app();
     const heading = screen.getByRole("heading", {
       name: /home/i,
     });
