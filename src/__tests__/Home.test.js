@@ -1,20 +1,21 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import Home from "../pages/Home";
 import { BrowserRouter } from "react-router-dom";
 
-describe("<App />", () => {
+describe("<Home />", () => {
   it("renders without errors", () => {
     render(
       <BrowserRouter>
-        <App />
+        <Home />
       </BrowserRouter>
     );
-        // screen.logTestingPlaygroundURL();
+    // screen.logTestingPlaygroundURL();
   });
+
   it("has a heading", () => {
     render(
       <BrowserRouter>
-        <App />
+        <Home />
       </BrowserRouter>
     );
     const heading = screen.getByRole("heading", {

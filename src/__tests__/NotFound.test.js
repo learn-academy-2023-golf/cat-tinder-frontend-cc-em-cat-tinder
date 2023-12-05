@@ -1,25 +1,24 @@
 import { render, screen } from "@testing-library/react";
-import App from "./App";
+import NotFound from "../pages/NotFound";
 import { BrowserRouter } from "react-router-dom";
 
-describe("<App />", () => {
+describe("<NotFound />", () => {
   it("renders without errors", () => {
     render(
       <BrowserRouter>
-        <App />
+        <NotFound />
       </BrowserRouter>
     );
-        // screen.logTestingPlaygroundURL();
+    // screen.logTestingPlaygroundURL();
   });
-  it("has a heading", () => {
+
+  it("displays 404 Not Found", () => {
     render(
       <BrowserRouter>
-        <App />
+        <NotFound />
       </BrowserRouter>
     );
-    const heading = screen.getByRole("heading", {
-      name: /home/i,
-    });
-    expect(heading).toBeInTheDocument();
+    const text = screen.getByText("404 Not Found");
+    expect(text).toBeInTheDocument();
   });
 });
