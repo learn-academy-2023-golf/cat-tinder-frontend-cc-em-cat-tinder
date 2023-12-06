@@ -4,7 +4,7 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 const CatIndex = ({ cats }) => {
   return (
     <>
-      <h1>All Cats</h1>;
+      <h1>All Cats</h1>
       <div className="d-flex flex-column justify-content-center align-items-center gap-3 flex-md-row">
         {cats.map((cat) => (
           <Card
@@ -27,7 +27,6 @@ const CatIndex = ({ cats }) => {
           </Card>
         ))}
       </div>
-      ;
     </>
   );
 };
