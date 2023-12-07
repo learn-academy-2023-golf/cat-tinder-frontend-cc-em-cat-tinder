@@ -14,6 +14,10 @@ import NotFound from "./pages/NotFound";
 const App = () => {
   const [cats, setCats] = useState(mockCats);
 
+  const createCat = (cat) => {
+    console.log("Created the cat", cat)
+  }
+
   return (
     <>
       <Header />
@@ -21,7 +25,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
-        <Route path="/catnew" element={<CatNew />} />
+        <Route path="/catnew" element={<CatNew createCat={createCat}/>} />
         <Route path="/catedit" element={<CatEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
