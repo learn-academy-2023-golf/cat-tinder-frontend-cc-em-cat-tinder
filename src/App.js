@@ -12,15 +12,15 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 
 const App = () => {
-  const [cat, setCats] = useState(mockCats);
-  console.log(mockCats);
+  const [cats, setCats] = useState(mockCats);
+
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/catindex" element={<CatIndex />} />
-        <Route path="/catshow" element={<CatShow />} />
+        <Route path="/catindex" element={<CatIndex cats={cats} />} />
+        <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
         <Route path="/catnew" element={<CatNew />} />
         <Route path="/catedit" element={<CatEdit />} />
         <Route path="*" element={<NotFound />} />
