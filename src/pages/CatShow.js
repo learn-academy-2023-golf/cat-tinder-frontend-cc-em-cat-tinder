@@ -12,7 +12,7 @@ const CatShow = ({ cats }) => {
             I am {selectedCat.name}, age {selectedCat.age}.
           </h2>
           <h3>I enjoy {selectedCat.enjoys}</h3>
-          <img alt={selectedCat.name} src={selectedCat.image} />
+          <img alt={`${selectedCat.name} photo`} src={selectedCat.image} />
         </div>
       )}
     </>

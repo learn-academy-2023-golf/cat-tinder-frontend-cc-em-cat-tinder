@@ -14,7 +14,7 @@ const CatIndex = ({ cats }) => {
               miHheight: "20rem",
             }}
           >
-            <img alt="Sample" src={cat.image} />
+            <img alt={`${cat.name} photo`} src={cat.image} />
             <CardBody>
               <CardTitle tag="h5">{cat.name}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">

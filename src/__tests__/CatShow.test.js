@@ -22,7 +22,7 @@ describe("<CatShow />", () => {
   });
   it("contains an image", () => {
     renderShow();
-    expect(screen.getByAltText(mockCats[0].name)).toBeInTheDocument();
+    expect(screen.getByAltText(`${mockCats[0].name} photo`)).toBeInTheDocument();
   });
   it("renders cat description", () => {
     renderShow();
