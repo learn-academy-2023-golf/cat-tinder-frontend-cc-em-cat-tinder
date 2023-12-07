@@ -20,4 +20,14 @@ describe("<CatShow />", () => {
       screen.getByText(`I enjoy ${mockCats[0].enjoys}`)
     ).toBeInTheDocument();
   });
+  it("contains an image", () => {
+    renderShow();
+    expect(screen.getByAltText(mockCats[0].name)).toBeInTheDocument();
+  });
+  it("renders cat description", () => {
+    renderShow();
+    expect(
+      screen.getByText(`I am ${mockCats[0].name}, age ${mockCats[0].age}.`)
+    ).toBeInTheDocument();
+  });
 });
