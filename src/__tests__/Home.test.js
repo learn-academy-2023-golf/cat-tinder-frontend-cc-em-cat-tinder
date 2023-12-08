@@ -16,7 +16,7 @@ describe("<Home />", () => {
   it("has a heading", () => {
     home();
     const heading = screen.getByRole("heading", {
-      name: /home/i,
+      name: /cat tinder/i,
     });
     expect(heading).toBeInTheDocument();
   });

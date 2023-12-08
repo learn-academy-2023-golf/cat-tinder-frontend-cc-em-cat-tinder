@@ -22,10 +22,12 @@ const CatNew = ({ createCat }) => {
   };
 
   return (
-    <>
-      <h1>Add New Cat</h1>
+    <div>
+      <h1 className="text-center my-5" style={{ textShadow: "0 5px 5px grey" }}>
+        Add New Cat
+      </h1>
 
-      <Form>
+      <Form className="w-75 m-auto p-3 shadow-lg rounded">
         <FormGroup>
           <Label for="name">Name</Label>
           <Input
@@ -62,9 +64,11 @@ const CatNew = ({ createCat }) => {
             onChange={handleChange}
           />
         </FormGroup>
-        <Button onClick={handleSubmit}>Submit</Button>
+        <Button className="w-100" onClick={handleSubmit}>
+          Submit
+        </Button>
       </Form>
-    </>
+    </div>
   );
 };
 
