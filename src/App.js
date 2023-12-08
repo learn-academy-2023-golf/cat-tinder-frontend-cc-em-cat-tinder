@@ -50,6 +50,7 @@ const App = () => {
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path="/catnew" element={<CatNew createCat={createCat} />} />
         <Route path="/catedit" element={<CatEdit />} />
 =======
@@ -64,6 +65,10 @@ const App = () => {
         <Route path="/catedit" element={<CatEdit />} />
 >>>>>>> 63049eb (Completed fetch for 'read' & 'create'.)
 >>>>>>> e3d50bf (merging changes)
+=======
+        <Route path="/catnew" element={<CatNew createCat={createCat}/>} />
+        <Route path="/catedit/:id" element={<CatEdit cats={cats} updateCat={updateCat}/>} />
+>>>>>>> 703f025 (merging branches)
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
