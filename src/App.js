@@ -49,12 +49,21 @@ const App = () => {
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Route path="/catnew" element={<CatNew createCat={createCat} />} />
         <Route path="/catedit" element={<CatEdit />} />
 =======
         <Route path="/catnew" element={<CatNew createCat={createCat}/>} />
         <Route path="/catedit/:id" element={<CatEdit cats={cats} updateCat={updateCat}/>} />
 >>>>>>> 29e3654 (Added Update Functionality and Testing)
+=======
+        <Route path="/catnew" element={<CatNew createCat={createCat}/>} />
+        <Route path="/catedit/:id" element={<CatEdit cats={cats} updateCat={updateCat}/>} />
+=======
+        <Route path="/catnew" element={<CatNew createCat={createCat} />} />
+        <Route path="/catedit" element={<CatEdit />} />
+>>>>>>> 63049eb (Completed fetch for 'read' & 'create'.)
+>>>>>>> e3d50bf (merging changes)
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
