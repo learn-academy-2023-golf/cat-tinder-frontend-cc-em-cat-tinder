@@ -12,8 +12,19 @@ const CatShow = ({ cats }) => {
             I am {selectedCat.name}, age {selectedCat.age}.
           </h2>
           <h3>I enjoy {selectedCat.enjoys}</h3>
-          <img alt={`${selectedCat.name} photo`} src={selectedCat.image} />
-          <NavLink role="link" to={`/catedit/${selectedCat.id}`} className="nav-link">
+          <img
+            alt={`${selectedCat.name} photo`}
+            src={selectedCat.image}
+            width="287"
+            height="500"
+            style={{ objectFit: "cover" }}
+            className="rounded"
+          />
+          <NavLink
+            role="link"
+            to={`/catedit/${selectedCat.id}`}
+            className="nav-link"
+          >
             Edit Cat Profile
           </NavLink>
         </div>
