@@ -61,6 +61,11 @@ const App = () => {
     .catch((errors) => console.log("delete errors", errors))
   }
 
+  const updateCat = (cat, id) => {
+    console.log("cat:", cat)
+    console.log("id:", id)
+  }
+
   return (
     <>
       <Header />

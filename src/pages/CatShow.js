@@ -39,7 +39,6 @@ const CatShow = ({ cats, deleteCat }) => {
           </NavLink>
 
           <Button onClick={handleSubmit}>Delete Cat Profile</Button>
-
         </div>
       )}
     </>
