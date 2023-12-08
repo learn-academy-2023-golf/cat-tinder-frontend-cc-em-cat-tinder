@@ -3,18 +3,28 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 
 const CatIndex = ({ cats }) => {
   return (
-    <>
-      <h1>All Cats</h1>
-      <div className="d-flex flex-column justify-content-center align-items-center gap-3 flex-md-row">
-        {cats.map((cat) => (
+    <div className="text-center my-5">
+      <h1 className="my-4" style={{ textShadow: "0 5px 5px grey" }}>
+        All Cats
+      </h1>
+      <div className="d-flex flex-column flex-wrap justify-content-center align-items-center gap-3 flex-md-row">
+        {cats.map((cat, i) => (
           <Card
-            key={cat.id}
+            key={i}
             style={{
               width: "18rem",
               miHheight: "20rem",
             }}
+            className="card mb-5 rounded"
           >
-            <img alt={`${cat.name} photo`} src={cat.image} />
+            <img
+              alt={`${cat.name} photo`}
+              src={cat.image}
+              width="287"
+              height="500"
+              style={{ objectFit: "cover" }}
+              className="rounded"
+            />
             <CardBody>
               <CardTitle tag="h5">{cat.name}</CardTitle>
               <CardSubtitle className="mb-2 text-muted" tag="h6">
@@ -27,7 +37,7 @@ const CatIndex = ({ cats }) => {
           </Card>
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

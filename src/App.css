@@ -2,4 +2,35 @@ a,
 li {
   text-decoration: none !important;
   list-style-type: none !important;
+  color: #fff !important;
+}
+
+img,
+.card,
+button,
+a {
+  transition: 0.2s all;
+}
+
+img:hover {
+  filter: brightness(1.1);
+}
+
+.card:hover {
+  box-shadow: 0 5px 5px grey;
+}
+
+button {
+  box-shadow: 0 5px 5px grey;
+}
+
+button:hover {
+  box-shadow: none;
+  border: 1px solid grey;
+  background-color: transparent !important;
+}
+
+button:hover a {
+  color: #000 !important;
+  font-weight: bold;
 }
