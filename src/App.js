@@ -36,6 +36,11 @@ const App = () => {
       .catch((err) => console.error("Cat create errors", err));
   };
 
+  const updateCat = (cat, id) => {
+    console.log("cat:", cat)
+    console.log("id:", id)
+  }
+
   return (
     <>
       <Header />
@@ -43,8 +48,13 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/catindex" element={<CatIndex cats={cats} />} />
         <Route path="/catshow/:id" element={<CatShow cats={cats} />} />
+<<<<<<< HEAD
         <Route path="/catnew" element={<CatNew createCat={createCat} />} />
         <Route path="/catedit" element={<CatEdit />} />
+=======
+        <Route path="/catnew" element={<CatNew createCat={createCat}/>} />
+        <Route path="/catedit/:id" element={<CatEdit cats={cats} updateCat={updateCat}/>} />
+>>>>>>> 29e3654 (Added Update Functionality and Testing)
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

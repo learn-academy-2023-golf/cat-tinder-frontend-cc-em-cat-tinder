@@ -22,12 +22,20 @@ describe("<CatShow />", () => {
   });
   it("contains an image", () => {
     renderShow();
-    expect(screen.getByAltText(`${mockCats[0].name} photo`)).toBeInTheDocument();
+    expect(
+      screen.getByAltText(`${mockCats[0].name} photo`)
+    ).toBeInTheDocument();
   });
   it("renders cat description", () => {
     renderShow();
     expect(
       screen.getByText(`I am ${mockCats[0].name}, age ${mockCats[0].age}.`)
+    ).toBeInTheDocument();
+  });
+  it("has a link to edit", () => {
+    renderShow();
+    expect(
+      screen.getByRole("link", { name: /edit cat profile/i })
     ).toBeInTheDocument();
   });
 });
