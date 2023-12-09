@@ -34,6 +34,7 @@ const cats = [
   {
     id: 5,
     name: "Zeus",
+    age: 17,
     enjoys: "watching and correcting",
     image:
       "https://images.unsplash.com/photo-1492370284958-c20b15c692d2?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGNhdHxlbnwwfHwwfHx8MA%3D%3D",
