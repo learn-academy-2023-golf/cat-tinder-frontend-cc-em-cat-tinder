@@ -1,32 +1,34 @@
 import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom";
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
 
 const CatEdit = ({ cats, updateCat }) => {
-  const { id } = useParams()
-  let currentCat = cats?.find((cat) => cat.id === +id)
+  const { id } = useParams();
+  let currentCat = cats?.find((cat) => cat.id === +id);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const handleSubmit = () => {
-    updateCat(editCat, currentCat.id)
-    navigate("/catindex")
-  }
+    updateCat(editCat, currentCat.id);
+    navigate("/catindex");
+  };
 
   const [editCat, setEditCat] = useState({
     name: currentCat.name,
     age: currentCat.age,
     enjoys: currentCat.enjoys,
-    image: currentCat.image
-  })
+    image: currentCat.image,
+  });
   const handleChange = (e) => {
-    setEditCat({ ...editCat, [e.target.name]: e.target.value})
-  }
+    setEditCat({ ...editCat, [e.target.name]: e.target.value });
+  };
 
   return (
     <>
-      <h1>Edit a Cat</h1>
+      <h1 className="text-center my-5" style={{ textShadow: "0 5px 5px grey" }}>
+        Edit a Cat
+      </h1>
 
-      <Form>
+      <Form className="w-75 m-auto p-3 shadow-lg rounded">
         <FormGroup>
           <Label for="name">Name</Label>
           <Input
@@ -63,7 +65,9 @@ const CatEdit = ({ cats, updateCat }) => {
             onChange={handleChange}
           />
         </FormGroup>
-        <Button onClick={handleSubmit} name="Submit">Submit Updated Cat</Button>
+        <Button className="w-100" onClick={handleSubmit} name="Submit">
+          Submit Updated Cat
+        </Button>
       </Form>
     </>
   );
