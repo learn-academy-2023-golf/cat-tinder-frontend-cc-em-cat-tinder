@@ -8,7 +8,7 @@ const CatIndex = ({ cats }) => {
         All Cats
       </h1>
 
-      <div className="d-flex flex-column flex-wrap justify-content-center align-items-center gap-3 flex-md-row pb-5">
+      <div className="d-flex flex-column flex-wrap justify-content-evenly align-items-center gap-3 flex-md-row pb-5">
         {cats.map((cat, i) => (
           <Card
             key={i}

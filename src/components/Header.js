@@ -8,7 +8,7 @@ const Header = () => {
       <Nav
         justified
         pills
-        className="p-4 bg-secondary d-flex flex-column flex-md-row justify-content-center align-item-end gap-4 w-100 m-auto"
+        className="p-2 bg-secondary d-flex flex-column flex-md-row justify-content-center align-item-end align-items-center gap-4 w-100 m-auto"
       >
         <NavItem>
           <NavLink className="text-white" to="/">
@@ -25,12 +25,12 @@ const Header = () => {
         </NavItem>
         <NavItem>
           <NavLink className="header-logo text-white fs-4" to="/catindex">
-            Cat Index
+            Meet the Cats
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink className="header-logo text-white fs-4" to="/catnew">
-            Cat New
+            Introduce Yourself
           </NavLink>
         </NavItem>
       </Nav>

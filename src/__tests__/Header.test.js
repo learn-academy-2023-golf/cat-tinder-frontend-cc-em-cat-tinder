@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import catLogo from "../assets/cat-logo.png";
 import Header from "../components/Header";
 import { BrowserRouter } from "react-router-dom";
 import userEvent from "@testing-library/user-event";
@@ -23,17 +24,17 @@ describe("<Header />", () => {
   });
   it("has clickable links", () => {
     header();
-    userEvent.click(screen.getByText("Home"));
-    expect(screen.getByText("Home")).toBeInTheDocument();
-    userEvent.click(screen.getByText("Cat Index"));
-    expect(screen.getByText("Cat Index")).toBeInTheDocument();
-    userEvent.click(screen.getByText("Cat New"));
-    expect(screen.getByText("Cat New")).toBeInTheDocument();
+    userEvent.click(screen.getByAltText("Cat Tinder logo"));
+    expect(screen.getByRole("img")).toHaveAttribute("src", catLogo);
+    userEvent.click(screen.getByText("Meet the Cats"));
+    expect(screen.getByText("Meet the Cats")).toBeInTheDocument();
+    userEvent.click(screen.getByText("Introduce Yourself"));
+    expect(screen.getByText("Introduce Yourself")).toBeInTheDocument();
   });
   it("Links are the correct role", () => {
     header();
-    const link = screen.getByRole("link", {
-      name: /Home/i,
+    const link = screen.getByRole('link', {
+      name: /cat tinder logo/i
     });
     expect(link).toBeInTheDocument();
     expect(link.getAttribute("href")).toBe("/");

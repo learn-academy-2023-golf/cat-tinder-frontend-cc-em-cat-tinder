@@ -1,3 +1,11 @@
+body {
+  overflow: auto;
+}
+
+#root {
+  height: 100vh
+}
+
 a,
 li,
 button {
@@ -53,4 +61,12 @@ button:hover a {
   background-color: rgba(245, 245, 245, 0.759);
   padding: 1rem;
   border-radius: 8px;
+}
+
+/* Footer */
+footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 0;
 }
