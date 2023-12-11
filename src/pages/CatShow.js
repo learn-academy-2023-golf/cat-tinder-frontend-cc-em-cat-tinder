@@ -1,5 +1,5 @@
 import { useParams, NavLink, useNavigate } from "react-router-dom";
-import { Button } from "reactstrap"
+import { Button } from "reactstrap";
 
 const CatShow = ({ cats, deleteCat }) => {
   const { id } = useParams();
@@ -14,10 +14,7 @@ const CatShow = ({ cats, deleteCat }) => {
   return (
     <>
       {selectedCat && (
-        <div
-          className="d-flex flex-column justify-content-center align-items-center mt-3"
-          style={{ height: "75vh" }}
-        >
+        <div className="d-flex flex-column justify-content-center align-items-center mt-3 p-3 shadow-lg rounded my-5 w-50 py-5 m-auto gap-3">
           <h2>
             I am {selectedCat.name}, age {selectedCat.age}.
           </h2>
@@ -38,7 +35,9 @@ const CatShow = ({ cats, deleteCat }) => {
             Edit Cat Profile
           </NavLink>
 
-          <Button onClick={handleSubmit}>Delete Cat Profile</Button>
+          <Button onClick={handleSubmit} className="bg-danger">
+            Delete Cat Profile
+          </Button>
         </div>
       )}
     </>
