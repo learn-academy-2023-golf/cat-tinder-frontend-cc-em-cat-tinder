@@ -3,11 +3,12 @@ import { Card, CardBody, CardTitle, CardSubtitle, Button } from "reactstrap";
 
 const CatIndex = ({ cats }) => {
   return (
-    <div className="text-center my-5">
+    <div className="cat-index text-center my-5">
       <h1 className="my-4" style={{ textShadow: "0 5px 5px grey" }}>
         All Cats
       </h1>
-      <div className="d-flex flex-column flex-wrap justify-content-center align-items-center gap-3 flex-md-row">
+
+      <div className="d-flex flex-column flex-wrap justify-content-center align-items-center gap-3 flex-md-row pb-5">
         {cats.map((cat, i) => (
           <Card
             key={i}

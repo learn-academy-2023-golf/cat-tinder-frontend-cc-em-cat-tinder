@@ -28,7 +28,7 @@ const CatEdit = ({ cats, updateCat }) => {
         Edit a Cat
       </h1>
 
-      <Form className="w-75 m-auto p-3 shadow-lg rounded">
+      <Form className="w-50 m-auto p-3 shadow-lg rounded my-5 pt-5 pb-3">
         <FormGroup>
           <Label for="name">Name</Label>
           <Input
@@ -65,7 +65,7 @@ const CatEdit = ({ cats, updateCat }) => {
             onChange={handleChange}
           />
         </FormGroup>
-        <Button className="w-100" onClick={handleSubmit} name="Submit">
+        <Button className="w-100 my-2" onClick={handleSubmit} name="Submit">
           Submit Updated Cat
         </Button>
       </Form>

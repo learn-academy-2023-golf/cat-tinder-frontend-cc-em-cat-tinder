@@ -27,7 +27,7 @@ const CatNew = ({ createCat }) => {
         Add New Cat
       </h1>
 
-      <Form className="w-75 m-auto p-3 shadow-lg rounded">
+      <Form className="w-50 m-auto p-3 shadow-lg rounded my-5 pt-5 pb-3">
         <FormGroup>
           <Label for="name">Name</Label>
           <Input

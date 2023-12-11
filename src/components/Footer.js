@@ -5,12 +5,30 @@ import { FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="w-100 bg-secondary m-auto position-fixed bottom-0 end-0">
+    <footer className="w-100 bg-secondary m-auto ">
       <div className="d-flex justify-content-evenly align-items-center py-4">
-        <FaYoutube role="button" aria-label="you tube" />
-        <FaTwitterSquare role="button" aria-label="twitter" />
-        <FaFacebookSquare role="button" aria-label="facebook" />
-        <FaTiktok role="button" aria-label="tiktok" />
+        <a href="https://www.youtube.com/" target="_blank">
+          {" "}
+          <FaYoutube className="fs-4" role="button" aria-label="you tube" />
+        </a>
+        <a href="https://twitter.com/?lang=en" target="_blank">
+          {" "}
+          <FaTwitterSquare
+            className="fs-4"
+            role="button"
+            aria-label="twitter"
+          />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <FaFacebookSquare
+            className="fs-4"
+            role="button"
+            aria-label="facebook"
+          />
+        </a>
+        <a href="https://www.tiktok.com/en/" target="_blank">
+          <FaTiktok className="fs-4" role="button" aria-label="tiktok" />
+        </a>
       </div>
       <small className="p-1 d-block text-center text-white">
         &copy; Cat Tinder | {new Date().getFullYear()}
